@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #2f0743,
+    #41295a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home-text {
+  position: absolute;
+  font-size: 10rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 400px) {
+  .home-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-text {
+    font-size: 2.5rem;
+  }
+}
+
+.space {
+  display: inline-block;
+  width: 10px;
+}
+
+.text-animation {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  /* text-transform: uppercase; */
+}
+.text-animation:before {
+  content: "";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  width: 0;
+  height: 1.2em;
+  -webkit-transform: translate(-50%, -55%);
+  -ms-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+.text-animation.state-1:before {
+  width: 1px;
+}
+.text-animation.state-2:before {
+  width: 0.9em;
+}
+.text-animation.state-3 {
+  color: rgb(255, 255, 255);
+}
+.text-animation.state-3:before {
+  width: 0;
+}
