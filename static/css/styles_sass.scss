@@ -35,7 +35,187 @@
   }
 }
 
-@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
-div {
-  font-family: "Share Tech Mono", monospace;
+// Config: fonts
+$font-mono: "Cutive Mono", monospace;
+// Config: Ease
+$ease-cb: cubic-bezier(0.19, 1, 0.22, 1);
+
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      transition-delay: $delay_time * $i;
+    }
+  }
+}
+
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      animation-delay: $delay_time * $i;
+    }
+  }
+}
+
+.sep {
+  border: 0;
+  width: 3em;
+  height: 1px;
+  margin: 1em 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.mast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  // &__header{
+  //   padding: 5%;
+  // }
+  &__title {
+    font-family: $font-mono;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  // Letter animation
+  &__title span {
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(25, 0.05s);
+  }
+  //Letter animation
+  &__text {
+    font-family: $font-mono;
+    font-size: 1em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+    white-space: pre;
+  }
+
+  &__text span {
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(180, 0.05s);
+  }
+}
+
+// Letter Glow
+@keyframes letter-glow {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+  }
+  66% {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+// Config: fonts
+$font-mono: "Cutive Mono", monospace;
+// Config: Ease
+$ease-cb: cubic-bezier(0.19, 1, 0.22, 1);
+
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      transition-delay: $delay_time * $i;
+    }
+  }
+}
+
+//--------------------------
+//  nth-ani-delay()
+//  @description: Animation Delay on nth-childs
+//  @param: $delay_items: [7] - number of nth-of-type items to create
+//  @param: $delay_time:[1.5s] - transition-dealy value
+//--------------------------
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s) {
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      animation-delay: $delay_time * $i;
+    }
+  }
+}
+
+.sep {
+  border: 0;
+  width: 3em;
+  height: 1px;
+  margin: 1em 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.mast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #111;
+  @include bg-overlay(#111, 0.9);
+
+  &__title {
+    font-family: $font-mono;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  // Letter animation
+  &__title span {
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(25, 0.05s);
+  }
+  //Letter animation
+  &__text {
+    font-family: $font-mono;
+    font-size: 1em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+    white-space: pre;
+  }
+
+  &__text span {
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(180, 0.05s);
+  }
+}
+
+// Letter Glow
+@keyframes letter-glow {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+  }
+  66% {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+  }
 }
