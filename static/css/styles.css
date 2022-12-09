@@ -411,15 +411,23 @@ section {
   font-size: 24px;
 }
 
-/* -----------RECRUITMENTS------------- */
+/* -----------EVENTS------------- */
 
-.recruitments {
+.events {
   color: rgba(245, 245, 245, 0.699);
   font-size: 1.2rem;
   border-radius: 20px;
   padding: 30px !important;
   margin: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+.event-banner {
+  height: 30rem;
+}
+
+.event-carousel {
+  margin: 1.5em;
 }
 
 /* -----------FOOTER------------------- */
@@ -506,9 +514,4 @@ footer ul {
   /* list-style: none; */
   display: block;
   padding-left: 0px !important;
-}
-
-/* --------------events-------- */
-.event-banner {
-  height: 30rem;
 }
