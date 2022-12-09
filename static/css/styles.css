@@ -161,6 +161,9 @@ body {
 
 .home-text {
   position: absolute;
+  /* display: flex;
+  text-align: center;
+  justify-content: center; */
   font-family: "Azonix" !important; /*to overpower the font by the sass file*/
   font-size: 8rem;
   left: 50%;
