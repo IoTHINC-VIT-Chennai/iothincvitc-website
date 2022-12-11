@@ -429,8 +429,58 @@ section {
   height: 30rem;
 }
 
-.event-carousel {
-  margin: 1.5em;
+@media screen and (min-width: 200px) {
+  .event-carousel {
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .event-carousel {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .event-carousel {
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .event-carousel {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .event-carousel {
+    margin: 30px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .event-carousel {
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .event-carousel {
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .event-carousel {
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .event-carousel {
+    margin: 1.5rem;
+  }
 }
 
 /* -----------FOOTER------------------- */
